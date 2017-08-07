@@ -1,5 +1,9 @@
 package kata.test.fizzbuzz;
 
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
 
 public class FizzBuzzTest {
 
@@ -14,6 +18,19 @@ public class FizzBuzzTest {
 	 * “FizzBuzz”."
 	 * 
 	 */
-
+	
+	// Breaking the Kata into features:
+	// 1) Write a program that prints the numbers from 1 to 100
+	
+	
+	@Test
+	public void TestNumberQuantity() {
+		
+		FizzBuzz fizzBuzz = new FizzBuzz();
+		fizzBuzz.run():
+		
+		assertEquals(100,FizzBuzz.getNumberLength);
+		
+	}
 	
 }
