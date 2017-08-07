@@ -36,7 +36,7 @@ public class FizzBuzzTest {
 		
 	}
 	
-	// But for multiples of three print “Fizz” instead of the number
+	// 2) But for multiples of three print “Fizz” instead of the number
 	@Test
 	public void TestMultiplesOfThree() {
 		
@@ -48,5 +48,20 @@ public class FizzBuzzTest {
 		assertTrue(fizzBuzz.getValueForPosition(multipleOfThree).toString().equals("Fizz"));
 		
 	}
+	
+	// 3) and for the multiples of five print “Buzz”
+	@Test
+	public void TestMultiplesOfFive() {
+		
+		FizzBuzz fizzBuzz = new FizzBuzz();
+		fizzBuzz.run();
+		Random r = new Random();
+		// There are 20 multiples of five within the defined range (1 to 100)
+		int multipleOfFive = r.ints(1, 20 + 1).findFirst().getAsInt() * 5;
+		assertTrue(fizzBuzz.getValueForPosition(multipleOfFive).toString().equals("Buzz"));
+		
+	}
+	
+	
 	
 }
