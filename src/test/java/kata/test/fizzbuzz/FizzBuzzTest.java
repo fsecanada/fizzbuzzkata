@@ -45,7 +45,7 @@ public class FizzBuzzTest {
 		Random r = new Random();
 		// There are 33 multiples of three within the defined range (1 to 100)
 		int multipleOfThree = r.ints(1, 33 + 1).findFirst().getAsInt() * 3;
-		assertTrue(fizzBuzz.getValueForPosition(multipleOfThree).toString().equals("Fizz"));
+		assertTrue(fizzBuzz.getValueForPosition(multipleOfThree).toString().contains("Fizz"));
 		
 	}
 	
@@ -58,10 +58,21 @@ public class FizzBuzzTest {
 		Random r = new Random();
 		// There are 20 multiples of five within the defined range (1 to 100)
 		int multipleOfFive = r.ints(1, 20 + 1).findFirst().getAsInt() * 5;
-		assertTrue(fizzBuzz.getValueForPosition(multipleOfFive).toString().equals("Buzz"));
+		assertTrue(fizzBuzz.getValueForPosition(multipleOfFive).toString().contains("Buzz"));
 		
 	}
 	
-	
+	// 4)  For numbers which are multiples of both three and five print “FizzBuzz”."
+	@Test
+	public void TestMultiplesOfFifteen() {
+		
+		FizzBuzz fizzBuzz = new FizzBuzz();
+		fizzBuzz.run();
+		Random r = new Random();
+		// There are 6 multiples of five within the defined range (1 to 100)
+		int multipleOfFive = r.ints(1, 6 + 1).findFirst().getAsInt() * 15;
+		assertTrue(fizzBuzz.getValueForPosition(multipleOfFive).toString().equals("FizzBuzz"));
+		
+	}
 	
 }

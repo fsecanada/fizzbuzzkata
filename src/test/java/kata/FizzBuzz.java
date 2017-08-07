@@ -14,13 +14,19 @@ public class FizzBuzz {
 		for (int i=1; i<=100; i++) {
 			boolean multipleOfThree = i%3==0;
 			boolean multipleOfFive = i%5==0;
-			if (multipleOfFive) {
-				resultList.add("Buzz");
-			} else if (multipleOfThree) {
-				resultList.add("Fizz");
-			} else {
-				resultList.add(String.valueOf(i));
+			
+			StringBuilder value = new StringBuilder();
+			if (multipleOfThree) {
+				value.append("Fizz");
 			}
+			if (multipleOfFive) {
+				value.append("Buzz");
+			}
+			if (!multipleOfThree && !multipleOfFive) {
+				value.append(i);
+			}
+		   
+			resultList.add(value.toString());
 		}
 		
 	}
