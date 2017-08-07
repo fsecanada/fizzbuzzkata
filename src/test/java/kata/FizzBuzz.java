@@ -22,4 +22,8 @@ public class FizzBuzz {
 		return intList.size();
 	}
 
+	public Integer getValueForPosition(int index) {
+		return intList.get(index);
+	}
+
 }
