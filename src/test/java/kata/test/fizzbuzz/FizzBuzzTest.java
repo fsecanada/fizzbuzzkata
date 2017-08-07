@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import kata.FizzBuzz;
+
 
 public class FizzBuzzTest {
 
@@ -27,9 +29,9 @@ public class FizzBuzzTest {
 	public void TestNumberQuantity() {
 		
 		FizzBuzz fizzBuzz = new FizzBuzz();
-		fizzBuzz.run():
+		fizzBuzz.run();
 		
-		assertEquals(100,FizzBuzz.getNumberLength);
+		assertEquals(100,fizzBuzz.getNumberLength());
 		
 	}
 	
