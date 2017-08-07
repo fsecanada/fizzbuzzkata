@@ -69,10 +69,12 @@ public class FizzBuzzTest {
 		FizzBuzz fizzBuzz = new FizzBuzz();
 		fizzBuzz.run();
 		Random r = new Random();
-		// There are 6 multiples of five within the defined range (1 to 100)
+		// There are 6 multiples of fifteen within the defined range (1 to 100)
 		int multipleOfFive = r.ints(1, 6 + 1).findFirst().getAsInt() * 15;
 		assertTrue(fizzBuzz.getValueForPosition(multipleOfFive).toString().equals("FizzBuzz"));
 		
 	}
+	
+	// This is the final code for the definition of a FizzBuzz exercise for the extra work of Software Craftmanship.
 	
 }
