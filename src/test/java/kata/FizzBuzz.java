@@ -13,7 +13,10 @@ public class FizzBuzz {
 		resultList = new ArrayList<String>();
 		for (int i=1; i<=100; i++) {
 			boolean multipleOfThree = i%3==0;
-			if (multipleOfThree) {
+			boolean multipleOfFive = i%5==0;
+			if (multipleOfFive) {
+				resultList.add("Buzz");
+			} else if (multipleOfThree) {
 				resultList.add("Fizz");
 			} else {
 				resultList.add(String.valueOf(i));
